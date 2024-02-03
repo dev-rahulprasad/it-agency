@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .banner::before,
+        .banner::after,
+        .footer:before,
+        .footer:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 1;
+        }
+
+        .banner::before {
+            transform: rotate(15deg);
+            transform-origin: top right;
+            bottom: -100%;
+            left: -50%;
+        }
+
+        .banner::after {
+            transform-origin: top left;
+            transform: rotate(-15deg);
+            bottom: -100%;
+            right: -50%;
+        }
+
+        .footer::before {
+            top: -100%;
+            left: -50%;
+            transform: rotate(-15deg);
+            transform-origin: bottom right;
+        }
+
+        .footer::after {
+            top: -100%;
+            right: -50%;
+            transform: rotate(15deg);
+            transform-origin: bottom left;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .nav-menu.active {
+            transform: translateX(0%);
+        }
+
+        @media only screen and (max-width:767px) {
+            .nav-menu {
+                transform: translateX(-100%);
+                transition: all .3s ease-in-out;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-black text-white fixed top-0 w-full z-10">
+        <nav class="container mx-auto px-3 md:px-8 flex items-center justify-between  ">
+            <div class="p-3 md:p-4 flex items-center gap-5 ">
+                <button class="md:hidden menuToggle">
+                    <svg fill="#fff" width="30" height="30" viewBox="0 0 50 50">
+                        <path
+                            d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z">
+                        </path>
+                    </svg>
+                </button>
+                <a href="" class="text-xl md:text-3xl uppercase">Logo</a>
+            </div>
+            <div class="overlay fixed top-0 right-0 w-screen h-screen md:hidden"></div>
+            <div
+                class="nav-menu fixed top-0 left-0 md:static  bg-white md:bg-black h-screen md:h-auto w-[90vw] max-w-[300px] md:w-auto md:max-w-none">
+                <div class="flex items-center gap-5 justify-between md:hidden bg-black p-3 md:p-4">
+                    <a href="" class="text-xl uppercase">Logo</a>
+                    <button class="menuToggle">
+                        <svg fill="#fff" width="30" height="30" viewBox="0 0 50 50">
+                            <path
+                                d="M 40.783203 7.2714844 A 2.0002 2.0002 0 0 0 39.386719 7.8867188 L 25.050781 22.222656 L 10.714844 7.8867188 A 2.0002 2.0002 0 0 0 9.2792969 7.2792969 A 2.0002 2.0002 0 0 0 7.8867188 10.714844 L 22.222656 25.050781 L 7.8867188 39.386719 A 2.0002 2.0002 0 1 0 10.714844 42.214844 L 25.050781 27.878906 L 39.386719 42.214844 A 2.0002 2.0002 0 1 0 42.214844 39.386719 L 27.878906 25.050781 L 42.214844 10.714844 A 2.0002 2.0002 0 0 0 40.783203 7.2714844 z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <ul
+                    class="flex flex-col items-start md:flex-row gap-2 md:items-center md:justify-center md:gap-5 p-3 md:p-4 text-black md:text-white">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="">
+            </div>
+        </nav>
+    </header>
+    <section class="h-screen max-h-[500px] md:max-h-full relative overflow-hidden">
+        <div class="absolute top-0 w-full  h-full  opacity-50 z-[0] brightness-[0.3]">
+            <img class="w-full h-full object-cover" src="./assets/images/img1.jpeg" alt="">
+        </div>
+        <div
+            class="absolute top-0 z-[2] w-full h-full flex flex-col items-center justify-center text-center banner px-3">
+            <p class="text-[20px] lg:text-[42px] font-bold leading-[20px] lg:leading-[34px] ">Welcome to</p>
+            <p class="text-[60px] lg:text-[224px] font-bold leading-[45px] lg:leading-[182px]">IT AGENCY</p>
+            <p class="text-[25px] lg:text-[52px] font-bold leading-[25px] lg:leading-[42px]">Web Designing, Development
+                & Marketing</p>
+        </div>
+    </section>
+    <section>
+        <div class="container mx-auto p-3 md:p-5">
+            <div class="h-[100px] md:h-[130px] w-[3px] mx-auto mb-[28px] border-l border-dashed border-black">
+            </div>
+            <p class="text-[32px] md:text-[42px] font-medium max-w-[700px] mx-auto text-center leading-[48px]">
+                We are one of the most effective
+                Web Design Company
+            </p>
+            <div class="h-[100px] md:h-[130px] w-[3px] mx-auto my-[28px]  border-l border-dashed border-black">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="conatiner mx-auto p-3 md:p-5 flex flex-wrap gap-y-5 text-center">
+
+            <a href="" class="p-5 flex flex-col items-center gap-5 md:gap-7 w-full md:w-1/3">
+                <div
+                    class="h-[100px] w-[100px] rounded-full border border-gray-500 bg-gray-500 ring-2 ring-offset-2 ring-gray-500">
+                </div>
+                <p class="text-[24px] md:text-[32px] xl:text-[40px] ">
+                    UI/UX Design
+                </p>
+                <p class="text-xs md:text-sm">
+                    Our Design Thinking team conceptualizes intuitive, engaging, and
+                    aesthetically attractive User Interface (UI) design that
+                    offers seamless User Experience (UX) across the web
+                    and mobile devices for your audience.
+                </p>
+            </a>
+            <a href="" class="p-5 flex flex-col items-center gap-5 md:gap-7 w-full md:w-1/3">
+                <div
+                    class="h-[100px] w-[100px] rounded-full border border-gray-500 bg-gray-500 ring-2 ring-offset-2 ring-gray-500">
+                </div>
+                <p class="text-[24px] md:text-[32px] xl:text-[40px] ">
+                    Web Development
+                </p>
+                <p class="text-xs md:text-sm">
+                    We are Creative Nerds. We are Technocrats.
+                    But We are Passionate about creating a
+                    Successful Brand for You!!!
+                </p>
+            </a>
+            <a href="" class="p-5 flex flex-col items-center gap-5 md:gap-7 w-full md:w-1/3">
+                <div
+                    class="h-[100px] w-[100px] rounded-full border border-gray-500 bg-gray-500 ring-2 ring-offset-2 ring-gray-500">
+                </div>
+                <p class="text-[24px] md:text-[32px] xl:text-[40px] ">
+                    Digital Marketing
+                </p>
+                <p class="text-xs md:text-sm">
+                    Nurture Your Vision, Magnify Your Brand & Increase
+                    Your Sales with Inspiring Digital
+                    Marketing Solutions
+                </p>
+            </a>
+        </div>
+        <div class="h-[100px] md:h-[130px] w-[3px] mx-auto border-l border-dashed border-black">
+        </div>
+    </section>
+    <section class="bg-[#1F2732]">
+        <div class="h-[100px] md:h-[130px] w-[3px] mx-auto mb-[28px] border-l border-dashed border-white">
+        </div>
+        <div class="flex flex-col gap-[56px] md:gap-[108px]">
+            <!-- right start  -->
+            <div class="flex md:gap-5 flex-col md:flex-row">
+                <div class="flex-[1] relative text-center md:text-left">
+                    <p class="text-[150px] md:text-[250px] font-bold text-[#FF9900] leading-[200px]">01</p>
+                    <p
+                        class="text-[40px] md:text-[80px] font-semibold text-white absolute right-1/2 md:right-0 bottom-0 md:top-1/2 translate-x-1/2 md:translate-x-0 md:-translate-y-1/2 z-[1]">
+                        Strategy</p>
+                </div>
+                <div
+                    class="relative flex flex-col md:flex-row items-center justify-between gap-4 flex-[2] ml-5 p-6 md:p-11 border-2 border-[#FF9900] rounded-l-[50px] border-r-0 shadow-[0_13px_4px_0px_rgba(0,0,0,0.25)]">
+                    <div class="absolute top-full md:top-1/2 left-0 md:-translate-x-full">
+                        <svg viewBox="0 0 49 199" fill="#fff" class="w-[49px]" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M42.6212 198.171C43.7058 198.38 44.7546 197.67 44.9638 196.586L48.3727 178.912C48.5819 177.827 47.8722 176.778 46.7876 176.569C45.703 176.36 44.6542 177.069 44.4451 178.154L41.415 193.864L25.7045 190.834C24.6199 190.625 23.5711 191.335 23.3619 192.419C23.1527 193.504 23.8624 194.553 24.947 194.762L42.6212 198.171ZM41.4173 0.98429C13.8964 36.6068 -0.0505638 65.4226 0.000137329 95.6539C0.0507622 125.839 14.0607 157.006 41.3436 197.328L44.6564 195.086C17.4711 154.908 4.04866 124.583 4.00013 95.6472C3.95168 66.7573 17.2388 38.823 44.5827 3.42977L41.4173 0.98429Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div
+                            class="h-[100px] w-[100px] rounded-full border border-gray-500 bg-gray-500 ring-2 ring-offset-2 ring-gray-500 overflow-hidden">
+                        </div>
+                    </div>
+                    <p class="text-white text-lg md:text-2xl font-medium text-center md:text-left">
+                        We begin our journey by analyzing your business
+                        objectives and end-user requirements to create
+                        a draft of Low-Fidelity Wireframes.
+                    </p>
+                </div>
+            </div>
+            <!-- right end -->
+            <!-- left start -->
+            <div class="flex md:gap-5 flex-col  md:flex-row-reverse">
+                <div class=" flex-[1] relative text-center md:text-right">
+                    <p class="text-[150px] md:text-[250px] font-bold text-[#FF00E5] leading-[200px]">02</p>
+                    <p
+                        class="text-[40px] md:text-[80px] font-semibold text-white absolute right-1/2 md:right-[unset] md:left-0 bottom-0 md:top-1/2 translate-x-1/2 md:translate-x-0 md:-translate-y-1/2 z-[1]">
+                        Design</p>
+                </div>
+                <div
+                    class="relative flex flex-col md:flex-row items-center justify-between gap-4 flex-[2] p-6 mr-5 md:p-11 border border-[#FF00E5] rounded-r-[50px] border-l-0 shadow-[0_13px_4px_0px_rgba(0,0,0,0.25)]">
+                    <div class="absolute top-full md:top-1/2 right-0 md:translate-x-full">
+                        <svg viewBox="0 0 48 198" fill="#fff" xmlns="http://www.w3.org/2000/svg" class="w-[49px]">
+                            <path
+                                d="M3.01626 195.462C3.15683 196.557 4.15893 197.331 5.25452 197.191L23.1082 194.9C24.2038 194.76 24.978 193.757 24.8374 192.662C24.6968 191.566 23.6947 190.792 22.5991 190.933L6.72922 192.969L4.69305 177.099C4.55248 176.003 3.55038 175.229 2.45479 175.37C1.3592 175.51 0.585003 176.512 0.725571 177.608L3.01626 195.462ZM6.58269 196.43C34.1036 160.807 48.0506 131.991 47.9999 101.76C47.9492 71.5749 33.9393 40.4082 6.65645 0.0862427L3.34355 2.32782C30.5289 42.5056 43.9513 72.831 43.9999 101.767C44.0483 130.657 30.7612 158.591 3.41731 193.984L6.58269 196.43Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div
+                            class="h-[100px] w-[100px] rounded-full border-2 border-gray-500 bg-gray-500 ring-2 ring-offset-2 ring-gray-500 overflow-hidden">
+                        </div>
+                    </div>
+                    <p class="text-white text-xl md:text-2xl font-medium text-center md:text-left">
+                        We begin our journey by analyzing your business
+                        objectives and end-user requirements to create
+                        a draft of Low-Fidelity Wireframes.
+                    </p>
+                </div>
+            </div>
+            <!-- left start -->
+            <!-- right start  -->
+            <div class="flex md:gap-5 flex-col md:flex-row">
+                <div class="flex-[1] relative text-center md:text-left">
+                    <p class="text-[150px] md:text-[250px] font-bold text-[#00FFF0] leading-[200px]">03</p>
+                    <p
+                        class="text-[40px] md:text-[80px] font-semibold text-white absolute right-1/2 md:right-0 bottom-0 md:top-1/2 translate-x-1/2 md:translate-x-0 md:-translate-y-1/2 z-[1]">
+                        Strategy</p>
+                </div>
+                <div
+                    class="relative flex flex-col md:flex-row items-center justify-between gap-4 flex-[2] ml-5 p-6 md:p-11 border-2 border-[#00FFF0] rounded-l-[50px] border-r-0 shadow-[0_13px_4px_0px_rgba(0,0,0,0.25)]">
+                    <div class="absolute top-full md:top-1/2 left-0 md:-translate-x-full">
+                        <svg viewBox="0 0 49 199" fill="#fff" class="w-[49px]" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M42.6212 198.171C43.7058 198.38 44.7546 197.67 44.9638 196.586L48.3727 178.912C48.5819 177.827 47.8722 176.778 46.7876 176.569C45.703 176.36 44.6542 177.069 44.4451 178.154L41.415 193.864L25.7045 190.834C24.6199 190.625 23.5711 191.335 23.3619 192.419C23.1527 193.504 23.8624 194.553 24.947 194.762L42.6212 198.171ZM41.4173 0.98429C13.8964 36.6068 -0.0505638 65.4226 0.000137329 95.6539C0.0507622 125.839 14.0607 157.006 41.3436 197.328L44.6564 195.086C17.4711 154.908 4.04866 124.583 4.00013 95.6472C3.95168 66.7573 17.2388 38.823 44.5827 3.42977L41.4173 0.98429Z"
+                                fill="white" />
+                        </svg>
+
+                    </div>
+                    <div>
+                        <div
+                            class="h-[100px] w-[100px] rounded-full border-2 border-gray-500 bg-gray-500 ring-2 ring-offset-2 ring-gray-500 overflow-hidden">
+
+                        </div>
+                    </div>
+                    <p class="text-white text-lg md:text-2xl font-medium text-center md:text-left">
+                        We begin our journey by analyzing your business
+                        objectives and end-user requirements to create
+                        a draft of Low-Fidelity Wireframes.
+                    </p>
+                </div>
+            </div>
+            <!-- right end -->
+            <!-- left start -->
+            <div class="flex md:gap-5 flex-col  md:flex-row-reverse">
+                <div class=" flex-[1] relative text-center md:text-right">
+                    <p class="text-[150px] md:text-[250px] font-bold text-[#00FF57] leading-[200px]">04</p>
+                    <p
+                        class="text-[40px] md:text-[80px] font-semibold text-white absolute right-1/2 md:right-[unset] md:left-0 bottom-0 md:top-1/2 translate-x-1/2 md:translate-x-0 md:-translate-y-1/2 z-[1]">
+                        Design</p>
+                </div>
+                <div
+                    class="flex flex-col md:flex-row items-center justify-between gap-4 flex-[2] p-6 mr-5 md:p-11 border border-[#00FF57] rounded-r-[50px] border-l-0 shadow-[0_13px_4px_0px_rgba(0,0,0,0.25)]">
+                    <div>
+                        <div
+                            class="h-[100px] w-[100px] rounded-full border-2 border-gray-500 bg-gray-500 ring-2 ring-offset-2 ring-gray-500 overflow-hidden">
+
+                        </div>
+                    </div>
+                    <p class="text-white text-xl md:text-2xl font-medium text-center md:text-left">
+                        We begin our journey by analyzing your business
+                        objectives and end-user requirements to create
+                        a draft of Low-Fidelity Wireframes.
+                    </p>
+                </div>
+            </div>
+            <!-- left start -->
+        </div>
+        <div class="h-[100px] md:h-[130px] w-[3px] mx-auto mt-[48px] border-l border-dashed border-white">
+        </div>
+    </section>
+    <section>
+        <div class="container mx-auto p-3 md:p-5 relative">
+
+
+            <a href=""
+                class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 text-blue-500 block text-center font-medium uppercase bg-white rounded-full shadow-md p-5 md:p-6 w-full max-w-[250px] mx-auto ">get
+                started</a>
+
+            <div class="h-[100px] md:h-[130px] w-[3px] mx-auto mb-[28px] border-l border-dashed border-black">
+            </div>
+            <p class="text-center text-[32px] md:text-[62px] font-medium">Get In touch</p>
+            <div class="h-[100px] md:h-[130px] w-[3px] mx-auto my-[28px] border-l border-dashed border-black">
+            </div>
+
+            <div class="flex justify-center items-center flex-wrap gap-[32px] md:gap-[64px]">
+                <div
+                    class="flex flex-col items-center border rounded-2xl px-[30px] py-[64px] md:flex-[1] max-w-[370px] bg-[#1F2732] text-white gap-[30px]">
+                    <div class="h-[100px] w-[100px] rounded-full bg-[#D9D9D9] overflow-hidden p-[6px]">
+                        <div class=" border-4 border-[#1F2732] h-full w-full rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-full p-2">
+                                <path
+                                    d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-[24px] md:text-[32px] ">Call Us</p>
+                    <div class="flex flex-col text-center">
+                        <a href="tel:+0000000000">New Accounts: 1-800-123-4567</a>
+                        <a href="tel:+0000000000">Support: 1-800-123-4569</a>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col items-center border rounded-2xl px-[30px] py-[64px] md:flex-[1] max-w-[370px] min-w-[300px] bg-[#1F2732] text-white gap-[30px]">
+
+                    <div class="h-[100px] w-[100px] rounded-full bg-[#D9D9D9] overflow-hidden p-[6px]">
+                        <div class=" border-4 border-[#1F2732] h-full w-full rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-full">
+                                <path
+                                    d="M160-400v-80h280v80H160Zm0-160v-80h440v80H160Zm0-160v-80h440v80H160Zm360 560v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T863-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-[24px] md:text-[32px] ">Write Us</p>
+                    <div class="flex flex-col text-center">
+                        <a href="mailto:example@example.com">example@gmail.com</a>
+                        <a href="mailto:example@example.com">example@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[100px] md:h-[130px] w-[3px] mx-auto my-[28px] border-l border-dashed border-black">
+            </div>
+
+            <div
+                class="absolute bottom-0 left-1/2 -translate-x-1/2 z-[2] translate-y-1/2 w-[100px] bg-[#FF0202] aspect-square rounded-full mx-auto">
+            </div>
+        </div>
+    </section>
+    <footer class="bg-[#1F2732] text-white relative footer overflow-hidden ">
+        <div class="py-[80px]">
+            <p class="text-[41px] font-bold text-center">IT Agency</p>
+            <ul class="flex items-center justify-center mt-3 gap-5 [&_li]:w-[30px]">
+                <li>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-full">
+                            <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path>
+                            <path fill="#fff"
+                                d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="w-full">
+                            <path
+                                d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-full">
+                            <path fill="#fbc02d"
+                                d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12	s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20	s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z">
+                            </path>
+                            <path fill="#e53935"
+                                d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039	l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z">
+                            </path>
+                            <path fill="#4caf50"
+                                d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z">
+                            </path>
+                            <path fill="#1565c0"
+                                d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+                    <li>
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-full">
+                                <path fill="#0288D1" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"></path><path fill="#FFF" d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"></path>
+                                </svg>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="./script/script.js"></script>
+</body>
+
+
+</html>
