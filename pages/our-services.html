@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/build.css">
     <link rel="stylesheet" href="../css/custom.css">
 </head>
 
 <body>
-    <header class="bg-black text-white fixed top-0 w-full z-10">
+    <header class="bg-[#1F2732] text-white fixed top-0 w-full z-10">
         <nav class="container mx-auto px-3 md:px-8 flex items-center justify-between  ">
             <div class="p-3 md:p-4 flex items-center gap-5 ">
                 <button class="md:hidden menuToggle">
@@ -24,13 +24,13 @@
                         </path>
                     </svg>
                 </button>
-                <a href="/" class="text-xl md:text-3xl uppercase">Logo</a>
+                <a href="../index.html" class="text-xl md:text-3xl uppercase">Logo</a>
             </div>
             <div class="overlay fixed top-0 right-0 w-screen h-screen md:hidden"></div>
             <div
-                class="nav-menu fixed top-0 left-0 md:static  bg-white md:bg-black h-screen md:h-auto w-[90vw] max-w-[300px] md:w-auto md:max-w-none">
-                <div class="flex items-center gap-5 justify-between md:hidden bg-black p-3 md:p-4">
-                    <a href="/" class="text-xl uppercase">Logo</a>
+                class="nav-menu fixed top-0 left-0 md:static  bg-white md:bg-[#1F2732] h-screen md:h-auto w-[90vw] max-w-[300px] md:w-auto md:max-w-none">
+                <div class="flex items-center gap-5 justify-between md:hidden bg-[#1F2732] p-3 md:p-4">
+                    <a href="../index.html" class="text-xl uppercase">Logo</a>
                     <button class="menuToggle">
                         <svg fill="#fff" width="30" height="30" viewBox="0 0 50 50">
                             <path
@@ -41,7 +41,7 @@
                 </div>
                 <ul
                     class="flex flex-col items-start md:flex-row gap-2 md:items-center md:justify-center md:gap-5 p-3 md:p-4 text-black md:text-white">
-                    <li><a href="../">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="./our-services.html">Services</a></li>
                     <li><a href="">About Us</a></li>
                     <li><a href="">Contact Us</a></li>
@@ -52,7 +52,7 @@
         </nav>
     </header>
     <section class="container mx-auto p-3 md:p-5 pt-[32px] md:pt-[48px] mt-[54px] md:mt-[68px]">
-        <p class="text-[32px] md:text-[50px] font-bold text-center border-b-8 w-fit mx-auto">Our Services</p>
+        <p class="text-[32px] md:text-[50px] font-bold text-center border-b-4 w-fit mx-auto">Our Services</p>
         <p class="text-[32px] md:text-[50px] font-medium text-center mt-[32px] md:mt-[48px]">What We Do</p>
         <p class="text-[16px] md:text-[24px] font-light text-center mx-auto mt-[16px] md:mt-[24px] max-w-4xl">
             We offer full-funnel digital marketing, web design & development
@@ -61,62 +61,62 @@
     </section>
     <div class="h-[70px] md:h-[100px] w-[3px] mx-auto my-[8px] md:my-[16px] border-l border-dashed border-black"></div>
     <main class="p-3 md:p-5">
-        <section class="flex flex-col md:flex-row items-center">
+        <a href="./ui-ux-design.html" class="flex flex-col md:flex-row items-center group">
             <div class="flex-[1]">
                 <img class="w-100" src="../assets/images/ui-ux.jpeg" alt="ui/ux">
             </div>
             <div class="text-center md:text-left flex-[1]">
                 <p class="text-[#FF9900] font-bold text-[16px] md:text-[20px] uppercase">We Design</p>
-                <p class="font-semibold text-[32px] md:text-[40px] uppercase">ui/ux Design</p>
+                <p class="font-semibold text-[32px] md:text-[40px] uppercase group-hover:text-indigo-800 transition-colors duration-100">ui/ux Design</p>
                 <p class="font-normal text-[20px] md:text-[24px] capitalize">
                     Launch Iconic Brands at the Intersection of
                     Creativity and Technology.
                 </p>
             </div>
-        </section>
+        </a>
         <div class="h-[70px] md:h-[100px] w-[3px] mx-auto my-[8px] md:my-[16px] border-l border-dashed border-black">
         </div>
-        <section class="flex flex-col md:flex-row-reverse items-center">
+        <a href="" class="flex flex-col md:flex-row-reverse items-center group">
             <div class="flex-[1]">
-                <img class="w-100" src="../assets/images/ui-ux.jpeg" alt="ui/ux">
+                <img class="w-100" src="../assets/images/web.jpeg" alt="web-development">
             </div>
             <div class="text-center md:text-right flex-[1]">
                 <p class="text-[#FF9900] font-bold text-[16px] md:text-[20px] uppercase">WE DEVELOP</p>
-                <p class="font-semibold text-[32px] md:text-[40px] uppercase">WEB DEVELOPMENT</p>
+                <p class="font-semibold text-[32px] md:text-[40px] uppercase group-hover:text-indigo-800 transition-colors duration-100">WEB DEVELOPMENT</p>
                 <p class="font-normal text-[20px] md:text-[24px] capitalize">
                     We are Creative Nerds. We are Technocrats. But We are Passionate about creating a Successful Brand
                     for You.
                 </p>
             </div>
-        </section>
+        </a>
         <div class="h-[70px] md:h-[100px] w-[3px] mx-auto my-[8px] md:my-[16px] border-l border-dashed border-black">
         </div>
-        <section class="flex flex-col md:flex-row items-center">
+        <a href="" class="flex flex-col md:flex-row items-center group">
             <div class="flex-[1]">
-                <img class="w-100" src="../assets/images/degital-marketing.jpeg" alt="ui/ux">
+                <img class="w-100" src="../assets/images/degital-marketing.jpeg" alt="digital-marketing">
             </div>
             <div class="text-center md:text-left flex-[1]">
                 <p class="text-[#FF9900] font-bold text-[16px] md:text-[20px] uppercase">WE SUPPORT</p>
-                <p class="font-semibold text-[32px] md:text-[40px] uppercase">DIGITAL MARKETING</p>
+                <p class="font-semibold text-[32px] md:text-[40px] uppercase group-hover:text-indigo-800 transition-colors duration-100">DIGITAL MARKETING</p>
                 <p class="font-normal text-[20px] md:text-[24px] capitalize">
                     Nurture Your Vision, Magnify Your Brand & Increase Your Sales with Inspiring Digital Marketing Solutions
                 </p>
             </div>
-        </section>
+        </a>
         <div class="h-[70px] md:h-[100px] w-[3px] mx-auto my-[8px] md:my-[16px] border-l border-dashed border-black">
         </div>
-        <section class="flex flex-col md:flex-row-reverse items-center">
+        <a href="" class="flex flex-col md:flex-row-reverse items-center group">
             <div class="flex-[1]">
-                <img class="w-100" src="../assets/images/business.jpeg" alt="ui/ux">
+                <img class="w-100" src="../assets/images/business.jpeg" alt="business">
             </div>
             <div class="text-center md:text-right flex-[1]">
                 <p class="text-[#FF9900] font-bold text-[16px] md:text-[20px] uppercase">WE CONSULT</p>
-                <p class="font-semibold text-[32px] md:text-[40px] uppercase">Business Consultancy Services</p>
+                <p class="font-semibold text-[32px] md:text-[40px] uppercase group-hover:text-indigo-800 transition-colors duration-100">Business Consultancy Services</p>
                 <p class="font-normal text-[20px] md:text-[24px] capitalize">
                     Let’s Navigate Your Business Challenges Together.
                 </p>
             </div>
-        </section>
+        </a>
         <div class="h-[70px] md:h-[100px] w-[3px] mx-auto my-[8px] md:my-[16px] border-l border-dashed border-black">
         </div>
     </main>
